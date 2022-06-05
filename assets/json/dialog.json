@@ -1,0 +1,24 @@
+[
+	[
+		{
+			"speaker" : "robotOne",
+			"dialog" : "Hey robot friend",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "robotTwo",
+			"dialog" : "Hey man how are you",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "robotOne",
+			"dialog" : "We need more friends",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "robotTwo",
+			"dialog" : "I agree lets create one",
+			"newSpeaker" : "true"
+		}
+	]
+]
