@@ -14,7 +14,7 @@ class MainMenu extends Phaser.Scene {
         this.load.image('textbox', 'img/textbox.png');
         this.load.image('robotOne', 'img/robotOne.png');
         this.load.image('robotTwo', 'img/robotTwo.png');
-        this.load.image('menu_background', 'img/menu_background.png');
+        this.load.image('menu_screen', 'img/menu_screen.png');
 
         // load audio
         this.load.audio('transition_sound', 'audio/transition_sound.mp3');
@@ -27,7 +27,7 @@ class MainMenu extends Phaser.Scene {
 
     create() {
 
-        this.add.tileSprite(0, 0, 840, 600, 'menu_background').setOrigin(0, 0);
+        this.add.tileSprite(0, 0, 840, 600, 'menu_screen').setOrigin(0, 0);
 
         // create input
         keySPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
