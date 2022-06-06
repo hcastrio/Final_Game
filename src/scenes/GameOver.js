@@ -10,6 +10,12 @@ class GameOver extends Phaser.Scene {
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
+
+        this.loopingAudio = this.sound.add("ending_sound");
+        // Set looping to true in the sound config object and play the audio
+        this.loopingAudio.play({
+            loop: true
+        });
     }
 
     update() {

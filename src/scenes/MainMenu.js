@@ -18,8 +18,8 @@ class MainMenu extends Phaser.Scene {
         this.load.image('ending_screen', 'img/ending_screen.png');
 
         // load audio
-        this.load.audio('transition_sound', 'audio/transition_sound.mp3');
-        this.load.audio('ending_sound', 'audio/ending_sound.mp3');
+        this.load.audio('transition_sound', 'audio/transition_sound.wav');
+        this.load.audio('ending_sound', 'audio/ending_sound.wav');
 
 
         // load bitmap font
