@@ -15,6 +15,7 @@ class MainMenu extends Phaser.Scene {
         this.load.image('robotOne', 'img/robotOne.png');
         this.load.image('robotTwo', 'img/robotTwo.png');
         this.load.image('menu_screen', 'img/menu_screen.png');
+        this.load.image('ending_screen', 'img/ending_screen.png');
 
         // load audio
         this.load.audio('transition_sound', 'audio/transition_sound.mp3');
