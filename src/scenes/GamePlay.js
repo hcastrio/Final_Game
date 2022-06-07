@@ -28,8 +28,8 @@ class GamePlay extends Phaser.Scene {
         this.nextText = null;			// player prompt text to continue typing
 
         // character variables
-        this.robotOne = null;
-        this.robotTwo = null;
+        this.Freddie = null;
+        this.Jose = null;
         this.tweenDuration = 500;
 
         this.OFFSCREEN_X = -500;        // x,y values to place characters offscreen
@@ -51,8 +51,8 @@ class GamePlay extends Phaser.Scene {
         this.nextText = this.add.bitmapText(this.NEXT_X, this.NEXT_Y, this.DBOX_FONT, '', this.TEXT_SIZE);
 
         // ready the character dialog images offscreen
-        this.robotOne = this.add.sprite(this.OFFSCREEN_X , this.DBOX_Y, 'robotOne').setOrigin(0, 1);
-        this.robotTwo = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'robotTwo').setOrigin(0, 1);
+        this.Freddie = this.add.sprite(this.OFFSCREEN_X , this.DBOX_Y, 'Freddie').setOrigin(0, 1);
+        this.Jose = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'Jose').setOrigin(0, 1);
 
         // input
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
@@ -76,7 +76,7 @@ class GamePlay extends Phaser.Scene {
             
             // trigger dialog
             this.typeText();
-        }
+        } 
     }
 
     typeText() {
@@ -137,7 +137,7 @@ class GamePlay extends Phaser.Scene {
             }
 
             // build dialog (concatenate speaker + line of text)
-            this.dialogLines = this.dialog[this.dialogConvo][this.dialogLine]['speaker'].toUpperCase() + ': ' + this.dialog[this.dialogConvo][this.dialogLine]['dialog'];
+            this.dialogLines = this.dialog[this.dialogConvo][this.dialogLine]['speaker'] + ': ' + this.dialog[this.dialogConvo][this.dialogLine]['dialog'];
 
             // create a timer to iterate through each letter in the dialog text
             let currentChar = 0; 

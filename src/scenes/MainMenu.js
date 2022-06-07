@@ -12,8 +12,8 @@ class MainMenu extends Phaser.Scene {
 
         // load images
         this.load.image('textbox', 'img/textbox.png');
-        this.load.image('robotOne', 'img/robotOne.png');
-        this.load.image('robotTwo', 'img/robotTwo.png');
+        this.load.image('Freddie', 'img/robotOne.png');
+        this.load.image('Jose', 'img/robotTwo.png');
         this.load.image('menu_screen', 'img/menu_screen.png');
         this.load.image('ending_screen', 'img/ending_screen.png');
         this.load.image('gamePlay_background', 'img/gamePlay_background.png');
