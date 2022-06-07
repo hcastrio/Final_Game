@@ -9,47 +9,6 @@
 			"speaker" : "Jose",
 			"dialog" : "I've been alright Freddie, how are you?",
 			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Freddie",
-			"dialog" : "I've been better, We need more friends!",
-			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Jose",
-			"dialog" : "I agree.",
-			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Freddie",
-			"dialog" : "We are robots so technically we can create one right?",
-			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Jose",
-			"dialog" : "This is True, lets do it!",
-			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Freddie",
-			"dialog" : "First we should decide what characteristics they should have.",
-			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Jose",
-			"dialog" : "Physical characteristics?",
-			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Freddie",
-			"dialog" : "No Silly, personality!",
-			"newSpeaker" : "true"
-		},
-		{	
-			"speaker" : "Freddie",
-			"dialog" : "No Silly, personality!",
-			"newSpeaker" : "true",
-			"options" : "true"
 		}
 	]
 ]

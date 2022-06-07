@@ -111,7 +111,7 @@ class GamePlay extends Phaser.Scene {
             
             this.dialogConvo = 0;
             this.sound.stopAll();
-            this.scene.start("creditsScene");
+            this.scene.start("firstQuestionScene");
 
         } else {
             // if not, set current speaker
