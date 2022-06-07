@@ -59,6 +59,13 @@ class GamePlay extends Phaser.Scene {
 
         // start dialog
         this.typeText();        
+
+        this.loopingAudio = this.sound.add("dialog_sound");
+        
+        // Set looping to true in the sound config object and play the audio
+        this.loopingAudio.play({
+            loop: true
+        });
     }
 
     update() {
@@ -103,8 +110,8 @@ class GamePlay extends Phaser.Scene {
             this.textbox.visible = false;
             
             this.dialogConvo = 0;
-            this.sound.play('ending_sound');
-            this.scene.start("gameOverScene");
+            this.sound.stopAll();
+            this.scene.start("creditsScene");
 
         } else {
             // if not, set current speaker

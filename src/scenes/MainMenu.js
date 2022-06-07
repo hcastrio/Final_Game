@@ -21,7 +21,8 @@ class MainMenu extends Phaser.Scene {
         // load audio
         this.load.audio('transition_sound', 'audio/transition_sound.wav');
         this.load.audio('ending_sound', 'audio/ending_sound.wav');
-
+        this.load.audio('mainMenu_sound', 'audio/mainMenu_sound.wav'); 
+        this.load.audio('dialog_sound', 'audio/dialog_sound.wav');
 
         // load bitmap font
         this.load.bitmapFont('the_font', 'font/font.png', 'font/font.xml');
@@ -33,12 +34,20 @@ class MainMenu extends Phaser.Scene {
 
         // create input
         keySPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+
+        this.loopingAudio = this.sound.add("mainMenu_sound");
+        
+        // Set looping to true in the sound config object and play the audio
+        this.loopingAudio.play({
+            loop: true
+        });
     }
 
     update() {
         // wait for player input
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
-            this.scene.start("gamePlayScene");
+            this.sound.stopAll();
+            this.scene.start("instructionsScene");
         }
     }
 }
