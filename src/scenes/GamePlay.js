@@ -37,6 +37,8 @@ class GamePlay extends Phaser.Scene {
     }
 
     create() {
+
+        this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
         
         // parse dialog from JSON file
         this.dialog = this.cache.json.get('dialog');

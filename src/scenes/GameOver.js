@@ -20,10 +20,12 @@ class GameOver extends Phaser.Scene {
 
     update() {
         if (Phaser.Input.Keyboard.JustDown(keyLEFT)) {
+            this.sound.stopAll();
             this.sound.play('transition_sound');
             this.scene.start('mainMenuScene');
         }
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
+            this.sound.stopAll();
             this.sound.play('transition_sound');
             this.scene.start('gamePlayScene');
         }
