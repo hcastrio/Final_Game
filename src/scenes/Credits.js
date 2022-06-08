@@ -5,7 +5,7 @@ class Credits extends Phaser.Scene {
 
     create() {
 
-        this.add.tileSprite(0, 0, 840, 600, 'credits_screen').setOrigin(0, 0);
+        this.add.tileSprite(0, 0, 840, 600, 'credits_screen').setOrigin(0, 0); // sets background
         
         // define keys
         keySPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
@@ -13,9 +13,9 @@ class Credits extends Phaser.Scene {
 
     update() {
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
-            this.sound.stopAll();
-            this.sound.play('transition_sound');
-            this.scene.start('gameOverScene');
+            this.sound.stopAll(); // stops all music
+            this.sound.play('transition_sound'); // plays sound when pressed
+            this.scene.start('gameOverScene'); // will go to next scene
         }
     }
 }

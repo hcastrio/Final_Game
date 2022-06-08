@@ -5,6 +5,7 @@ class Instructions extends Phaser.Scene {
 
     create() {
 
+        // add background
         this.add.tileSprite(0, 0, 840, 600, 'instructions_screen').setOrigin(0, 0);
         
         // define keys
@@ -13,8 +14,11 @@ class Instructions extends Phaser.Scene {
 
     update() {
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
+
             this.sound.stopAll();
+
             this.sound.play('transition_sound');
+
             this.scene.start('gamePlayScene');
         }
     }

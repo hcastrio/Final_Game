@@ -38,6 +38,7 @@ class GamePlay extends Phaser.Scene {
 
     create() {
 
+        // adds background
         this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
         
         // parse dialog from JSON file
@@ -89,13 +90,16 @@ class GamePlay extends Phaser.Scene {
 
         // make sure there are lines left to read in this convo, otherwise jump to next convo
         if(this.dialogLine > this.dialog[this.dialogConvo].length - 1) {
+
             this.dialogLine = 0;
+
             // increment conversations
             this.dialogConvo++;
         }
         
         // make sure we haven't run out of conversations...
         if(this.dialogConvo >= this.dialog.length) {
+
             // "exiting" the last speaker and removing the dialog box,
             // tween out prior speaker's image
             if(this.dialogLastSpeaker) {
@@ -106,18 +110,23 @@ class GamePlay extends Phaser.Scene {
                     ease: 'Linear'
                 });
             }
+            
             // make text box invisible
             this.textbox.visible = false;
             
+            // restarts dialog
             this.dialogConvo = 0;
-            
+
             this.scene.start("firstQuestionScene");
 
         } else {
+
             // if not, set current speaker
             this.dialogSpeaker = this.dialog[this.dialogConvo][this.dialogLine]['speaker'];
+
             // check if there's a new speaker (for exit/enter animations)
             if(this.dialog[this.dialogConvo][this.dialogLine]['newSpeaker']) {
+
                 // tween out prior speaker's image
                 if(this.dialogLastSpeaker) {
                     this.tweens.add({
@@ -127,6 +136,7 @@ class GamePlay extends Phaser.Scene {
                         ease: 'Linear'
                     });
                 }
+                
                 // tween in new speaker's image
                 this.tweens.add({
                     targets: this[this.dialogSpeaker],

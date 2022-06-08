@@ -5,6 +5,7 @@ class FirstQuestion extends Phaser.Scene {
 
     create() {
 
+        // adds background
         this.add.tileSprite(0, 0, 840, 600, 'firstquestion_screen').setOrigin(0, 0);
         
         // define keys
@@ -13,13 +14,17 @@ class FirstQuestion extends Phaser.Scene {
     }
 
     update() {
+
+        // pressed up key
         if (Phaser.Input.Keyboard.JustDown(keyUP)) {
-            perm = perm + "a";
-            this.scene.start("secondQuestionScene");
+            perm = perm + "a"; // for permutations 
+            this.scene.start("secondQuestionScene"); // next scene
         }
+
+        // pressed down key
         if (Phaser.Input.Keyboard.JustDown(keyDOWN)) {
-            perm = perm + "b";
-            this.scene.start("secondQuestionScene");
+            perm = perm + "b"; // for permutations 
+            this.scene.start("secondQuestionScene"); // next scene
         }
     }
 }

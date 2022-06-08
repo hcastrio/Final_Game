@@ -5,6 +5,7 @@ class GameOver extends Phaser.Scene {
 
     create() {
 
+        // adds background
         this.add.tileSprite(0, 0, 840, 600, 'ending_screen').setOrigin(0, 0);
         
         // define keys
@@ -20,17 +21,31 @@ class GameOver extends Phaser.Scene {
 
     update() {
         if (Phaser.Input.Keyboard.JustDown(keyLEFT)) {
-            description = ""
+
+            // new friends interests clears
+            description = "";
+
+            // clears permutation
             perm = "";
+
             this.sound.stopAll();
+
             this.sound.play('transition_sound');
+
             this.scene.start('mainMenuScene');
         }
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
-            description = ""
+
+            // new friends interests clears
+            description = "";
+
+            // clears permutation
             perm = "";
+
             this.sound.stopAll();
+
             this.sound.play('transition_sound');
+            
             this.scene.start('gamePlayScene');
         }
     }

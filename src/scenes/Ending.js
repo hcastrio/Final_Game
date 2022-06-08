@@ -38,6 +38,7 @@ class Ending extends Phaser.Scene {
 
     create() {
 
+        // sets background
         this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
         
         // parse dialog from JSON file
@@ -62,9 +63,11 @@ class Ending extends Phaser.Scene {
     }
 
     update() {
+
         // check for spacebar press
         if(Phaser.Input.Keyboard.JustDown(keyRIGHT) && !this.dialogTyping) {
 
+            // play sound when pressed
             this.sound.play('transition_sound');
             
             // trigger dialog
@@ -73,6 +76,7 @@ class Ending extends Phaser.Scene {
     }
 
     typeText() {
+
         // lock input while typing
         this.dialogTyping = true;
 
@@ -82,13 +86,16 @@ class Ending extends Phaser.Scene {
 
         // make sure there are lines left to read in this convo, otherwise jump to next convo
         if(this.dialogLine > this.dialog[this.dialogConvo].length - 1) {
+
             this.dialogLine = 0;
+
             // increment conversations
             this.dialogConvo++;
         }
         
         // make sure we haven't run out of conversations...
         if(this.dialogConvo >= this.dialog.length) {
+
             // "exiting" the last speaker and removing the dialog box,
             // tween out prior speaker's image
             if(this.dialogLastSpeaker) {
@@ -99,18 +106,27 @@ class Ending extends Phaser.Scene {
                     ease: 'Linear'
                 });
             }
+
             // make text box invisible
             this.textbox.visible = false;
-            
+
+            // restarts dialog
             this.dialogConvo = 0;
+
+            // stops all sounds
             this.sound.stopAll();
+ 
+            // next scene
             this.scene.start("creditsScene");
 
         } else {
+
             // if not, set current speaker
             this.dialogSpeaker = this.dialog[this.dialogConvo][this.dialogLine]['speaker'];
-            // check if there's a new speaker (for exit/enter animations)
+
+            // check if there's a new speaker
             if(this.dialog[this.dialogConvo][this.dialogLine]['newSpeaker']) {
+
                 // tween out prior speaker's image
                 if(this.dialogLastSpeaker) {
                     this.tweens.add({
@@ -120,6 +136,7 @@ class Ending extends Phaser.Scene {
                         ease: 'Linear'
                     });
                 }
+
                 // tween in new speaker's image
                 this.tweens.add({
                     targets: this[this.dialogSpeaker],
@@ -146,7 +163,6 @@ class Ending extends Phaser.Scene {
                     currentChar++;
 
                     // check if timer has exhausted its repeats 
-                    // (necessary since Phaser 3 no longer seems to have an onComplete event)
                     if(this.textTimer.getRepeatCount() == 0) {
 
                         // show prompt for more text
@@ -159,6 +175,7 @@ class Ending extends Phaser.Scene {
                         this.textTimer.destroy();
                     }
                 },
+                
                 callbackScope: this // keep Scene context
             });
             

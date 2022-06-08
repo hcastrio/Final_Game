@@ -36,6 +36,7 @@ class MainMenu extends Phaser.Scene {
 
     create() {
 
+        // adds background
         this.add.tileSprite(0, 0, 840, 600, 'menu_screen').setOrigin(0, 0);
 
         // create input
@@ -50,9 +51,12 @@ class MainMenu extends Phaser.Scene {
     }
 
     update() {
+
         // wait for player input
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
+
             this.scene.start("instructionsScene");
+            
         }
     }
 }

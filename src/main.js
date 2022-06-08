@@ -1,3 +1,10 @@
+// Game Name: Robot Friends
+// Collaborators: Horacio Castillo Del Rio, Ethan Herrera, and Matthew Herrera
+// Completed 06/07/2022
+// Creative Tilt:
+//            Our art and sound were all custom made and used permutations, all related to our game and help the players get immersed into
+//            the journey of helping Freddie and Jose.
+
 // BE STRIK
 "use strict";
 
