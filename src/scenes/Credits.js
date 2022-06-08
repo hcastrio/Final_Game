@@ -13,8 +13,11 @@ class Credits extends Phaser.Scene {
 
     update() {
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
+
             this.sound.stopAll(); // stops all music
+
             this.sound.play('transition_sound'); // plays sound when pressed
+            
             this.scene.start('gameOverScene'); // will go to next scene
         }
     }
