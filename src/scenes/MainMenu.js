@@ -4,6 +4,7 @@ class MainMenu extends Phaser.Scene {
     }
 
     preload() {
+        
         // load assets
         this.load.path = "./assets/";
 
@@ -23,6 +24,7 @@ class MainMenu extends Phaser.Scene {
         this.load.image('questions_screen', 'img/questions_screen.png');
         this.load.image('firstquestion_screen', 'img/firstquestion_screen.png');
         this.load.image('secondquestion_screen', 'img/secondquestion_screen.png');
+        this.load.image('newFriend_screen', 'img/newFriend_screen.png');
 
         // load audio
         this.load.audio('transition_sound', 'audio/transition_sound.wav');

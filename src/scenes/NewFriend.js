@@ -5,14 +5,14 @@ class NewFriend extends Phaser.Scene {
 
     create() {
 
-        this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
+        this.add.tileSprite(0, 0, 840, 600, 'newFriend_screen').setOrigin(0, 0);
         
         // define keys
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
         let questionConfig = {
-            fontFamily: 'system-ui ',
-            fontSize: '42px',
+            fontFamily: 'dpcomic',
+            fontSize: '40px',
             color: '#fff ',
             align: 'center',
             padding: {
@@ -22,16 +22,16 @@ class NewFriend extends Phaser.Scene {
             fixedWidth: 0
         }
 
-          this.add.text(centerX, centerY - 40, "The new friend is " + thirdRobot, questionConfig).setOrigin(0.5);
+          this.add.text(centerX + 70, centerY - 50 , thirdRobot, questionConfig).setOrigin(0.5);
 
-          this.add.text(centerX, centerY, description, questionConfig).setOrigin(0.5);
+          this.add.text(centerX - 8 , centerY + 114, description, questionConfig).setOrigin(0.5);
     }
 
     update() {
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
 
             this.sound.play('transition_sound');
-            
+
             this.scene.start('endingScene');
         }
     }
