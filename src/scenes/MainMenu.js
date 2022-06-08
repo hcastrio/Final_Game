@@ -52,7 +52,6 @@ class MainMenu extends Phaser.Scene {
     update() {
         // wait for player input
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
-            this.sound.stopAll();
             this.scene.start("instructionsScene");
         }
     }

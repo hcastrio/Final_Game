@@ -110,7 +110,7 @@ class GamePlay extends Phaser.Scene {
             this.textbox.visible = false;
             
             this.dialogConvo = 0;
-            this.sound.stopAll();
+            
             this.scene.start("firstQuestionScene");
 
         } else {

@@ -8,7 +8,7 @@ class NewFriend extends Phaser.Scene {
         this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
         
         // define keys
-        keySPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+        keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
         let questionConfig = {
             fontFamily: 'system-ui ',
@@ -27,8 +27,7 @@ class NewFriend extends Phaser.Scene {
     }
 
     update() {
-        if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
-            this.sound.stopAll();
+        if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
             this.sound.play('transition_sound');
             this.scene.start('endingScene');
         }

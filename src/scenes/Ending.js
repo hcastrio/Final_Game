@@ -59,13 +59,6 @@ class Ending extends Phaser.Scene {
 
         // start dialog
         this.typeText();        
-
-        this.loopingAudio = this.sound.add("dialog_sound");
-        
-        // Set looping to true in the sound config object and play the audio
-        this.loopingAudio.play({
-            loop: true
-        });
     }
 
     update() {
