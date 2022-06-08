@@ -1,0 +1,23 @@
+[
+	[
+		{
+			"speaker" : "Freddie",
+			"dialog" : "Thank You So Much.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Jose",
+			"dialog" : "For helping us create our new friend.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Jose",
+			"dialog" : "We are no longer lonely."
+		},
+		{	
+			"speaker" : "Freddie",
+			"dialog" : "Now enjoy your day, cya later!",
+			"newSpeaker" : "true"
+		}
+	]
+]

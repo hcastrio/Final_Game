@@ -9,6 +9,7 @@ class MainMenu extends Phaser.Scene {
 
         // load JSON (dialog)
         this.load.json('dialog', 'json/dialog.json');
+        this.load.json('dialog2', 'json/dialog2.json');
 
         // load images
         this.load.image('textbox', 'img/textbox.png');
@@ -20,6 +21,8 @@ class MainMenu extends Phaser.Scene {
         this.load.image('credits_screen', 'img/credits_screen.png');
         this.load.image('instructions_screen', 'img/instructions_screen.png');
         this.load.image('questions_screen', 'img/questions_screen.png');
+        this.load.image('firstquestion_screen', 'img/firstquestion_screen.png');
+        this.load.image('secondquestion_screen', 'img/secondquestion_screen.png');
 
         // load audio
         this.load.audio('transition_sound', 'audio/transition_sound.wav');

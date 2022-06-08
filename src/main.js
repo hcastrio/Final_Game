@@ -6,7 +6,7 @@ let config = {
     type: Phaser.AUTO,
     width: 840,
     height: 600,
-    scene: [ MainMenu, GamePlay, GameOver, Credits, Instructions, FirstQuestion, SecondQuestion, NewFriend ]
+    scene: [ MainMenu, GamePlay, GameOver, Credits, Instructions, FirstQuestion, SecondQuestion, NewFriend, Ending ]
 };
 
 const game = new Phaser.Game(config);

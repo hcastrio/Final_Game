@@ -9,6 +9,57 @@
 			"speaker" : "Jose",
 			"dialog" : "I've been alright Freddie, how are you?",
 			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Freddie",
+			"dialog" : "I've been better, We need more friends!",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Jose",
+			"dialog" : "I agree.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Jose",
+			"dialog" : "We are lonely."
+		},
+		{	
+			"speaker" : "Freddie",
+			"dialog" : "We are robots so technically we can create one right?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Jose",
+			"dialog" : "This is True.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Jose",
+			"dialog" : "Lets have the player help us."
+		},
+		{	
+			"speaker" : "Freddie",
+			"dialog" : "Perfect lets put them to work.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Freddie",
+			"dialog" : "First we should decide what characteristics our new friend should have."
+		},
+		{	
+			"speaker" : "Jose",
+			"dialog" : "Physical characteristics?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Freddie",
+			"dialog" : "No Silly, personality!",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "Freddie",
+			"dialog" : "Now we will ask you a series of questions so you can create our new friend."
 		}
 	]
 ]

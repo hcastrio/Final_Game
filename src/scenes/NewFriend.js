@@ -30,7 +30,7 @@ class NewFriend extends Phaser.Scene {
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
             this.sound.stopAll();
             this.sound.play('transition_sound');
-            this.scene.start('creditsScene');
+            this.scene.start('endingScene');
         }
     }
 }
