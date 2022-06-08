@@ -13,7 +13,7 @@ class NewFriend extends Phaser.Scene {
         let questionConfig = {
             fontFamily: 'system-ui ',
             fontSize: '42px',
-            color: '#000',
+            color: '#fff ',
             align: 'center',
             padding: {
             top: 5,
@@ -21,7 +21,9 @@ class NewFriend extends Phaser.Scene {
             },
             fixedWidth: 0
           }
-          this.add.text(centerX, centerY - 40, thirdRobot, questionConfig).setOrigin(0.5);
+          this.add.text(centerX, centerY - 40, "The new friend is " + thirdRobot, questionConfig).setOrigin(0.5);
+
+          this.add.text(centerX, centerY, description, questionConfig).setOrigin(0.5);
     }
 
     update() {

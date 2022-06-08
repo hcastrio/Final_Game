@@ -5,7 +5,7 @@ class SecondQuestion extends Phaser.Scene {
 
     create() {
 
-        this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
+        this.add.tileSprite(0, 0, 840, 600, 'questions_screen').setOrigin(0, 0);
         
         // define keys
         keyUP = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
@@ -14,7 +14,7 @@ class SecondQuestion extends Phaser.Scene {
         let questionConfig = {
             fontFamily: 'system-ui ',
             fontSize: '42px',
-            color: '#000',
+            color: '#fff',
             align: 'center',
             padding: {
             top: 5,
@@ -22,26 +22,30 @@ class SecondQuestion extends Phaser.Scene {
             },
             fixedWidth: 0
           }
-          this.add.text(centerX, centerY - 40, 'Nice?', questionConfig).setOrigin(0.5);
-          this.add.text(centerX, centerY + 40, 'Mean?', questionConfig).setOrigin(0.5);  
+          this.add.text(centerX, centerY - 100, 'Should they like dogs?', questionConfig).setOrigin(0.5);
+          this.add.text(centerX, centerY, 'Should they like cats?', questionConfig).setOrigin(0.5);  
     }
 
     update() {
         if (Phaser.Input.Keyboard.JustDown(keyUP)) {
             perm = perm + "c";
             if(perm === "ac") {
-                thirdRobot = "bob";
+                thirdRobot = "Bob";
+                description = "I love pineapple on pizza and dogs.";
             } else if(perm === "bc") {
-                thirdRobot = "john";
+                thirdRobot = "John";
+                description = "I love boba and dogs.";
             }
             this.scene.start("newFriendScene");
         }
         if (Phaser.Input.Keyboard.JustDown(keyDOWN)) {
             perm = perm + "d";
             if(perm === "ad") {
-                thirdRobot = "mary";
+                thirdRobot = "Mary";
+                description = "I love pineapple on pizza and cats.";
             } else if(perm === "bd") {
                 thirdRobot = "Jessica";
+                description = "I love boba and cats.";
             }
             this.scene.start("newFriendScene");
         }

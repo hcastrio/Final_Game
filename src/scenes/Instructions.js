@@ -5,7 +5,7 @@ class Instructions extends Phaser.Scene {
 
     create() {
 
-        this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
+        this.add.tileSprite(0, 0, 840, 600, 'instructions_screen').setOrigin(0, 0);
         
         // define keys
         keySPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);

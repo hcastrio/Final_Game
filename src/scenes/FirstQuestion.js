@@ -5,7 +5,7 @@ class FirstQuestion extends Phaser.Scene {
 
     create() {
 
-        this.add.tileSprite(0, 0, 840, 600, 'gamePlay_background').setOrigin(0, 0);
+        this.add.tileSprite(0, 0, 840, 600, 'questions_screen').setOrigin(0, 0);
         
         // define keys
         keyUP = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
@@ -14,7 +14,7 @@ class FirstQuestion extends Phaser.Scene {
         let questionConfig = {
             fontFamily: 'system-ui ',
             fontSize: '42px',
-            color: '#000',
+            color: '#fff',
             align: 'center',
             padding: {
             top: 5,
@@ -22,8 +22,8 @@ class FirstQuestion extends Phaser.Scene {
             },
             fixedWidth: 0
           }
-          this.add.text(centerX, centerY - 40, 'Smart?', questionConfig).setOrigin(0.5);
-          this.add.text(centerX, centerY + 40, 'Average?', questionConfig).setOrigin(0.5);  
+          this.add.text(centerX, centerY - 100, 'Should they like pineapple on their pizza?', questionConfig).setOrigin(0.5);
+          this.add.text(centerX, centerY, 'Should they like boba?', questionConfig).setOrigin(0.5);
     }
 
     update() {

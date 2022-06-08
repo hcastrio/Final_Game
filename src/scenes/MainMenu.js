@@ -17,6 +17,9 @@ class MainMenu extends Phaser.Scene {
         this.load.image('menu_screen', 'img/menu_screen.png');
         this.load.image('ending_screen', 'img/ending_screen.png');
         this.load.image('gamePlay_background', 'img/gamePlay_background.png');
+        this.load.image('credits_screen', 'img/credits_screen.png');
+        this.load.image('instructions_screen', 'img/instructions_screen.png');
+        this.load.image('questions_screen', 'img/questions_screen.png');
 
         // load audio
         this.load.audio('transition_sound', 'audio/transition_sound.wav');

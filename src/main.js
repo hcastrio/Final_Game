@@ -18,3 +18,4 @@ let keyUP, keyDOWN, keyRIGHT, keyLEFT, keySPACE;
 
 let perm = ""
 let thirdRobot = "";
+let description = "";
